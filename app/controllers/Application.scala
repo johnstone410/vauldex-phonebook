@@ -73,5 +73,9 @@ class Application @Inject()(
 
   }
 
+  def tsar = Action {
+    TODO
+  }
+
 
 }
