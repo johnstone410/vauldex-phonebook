@@ -1,0 +1,82 @@
+@(title: String)(content: Html)
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>@title</title>
+  <link rel="stylesheet"  href="@routes.WebJarAssets.at(WebJarAssets.locate("foundation.min.css"))">
+  <link rel="stylesheet"  href="@routes.WebJarAssets.at(WebJarAssets.locate("font-awesome.min.css"))">
+</head>
+<body>
+
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">Phonebook</a></h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li @if(title == "Phonebook") {class="active" }><a href="@routes.Application.index()">All Contacts</a></li>
+          <li @if(title == "Add Contact") {class="active" }><a href="@routes.Application.add_contact()">Add a Contact</a></li>
+
+        </ul>
+      </section>
+    </nav>
+
+    <div class="large-12 centered">
+      @content
+    </div>
+
+    <script src="@routes.WebJarAssets.at(WebJarAssets.fullPath("jquery","jquery.min.js"))"></script>
+    <script src="@routes.WebJarAssets.at(WebJarAssets.locate("foundation.min.js"))"></script>
+
+    <script>
+      $(document).foundation();
+
+      $(document).ready(function(){
+          $(".delete").click(function(e){
+            if(confirm("Are you sure you want to delete this record ?"))
+                  return true;
+            else
+              e.preventDefault();
+
+          });
+
+          $(".edit").click(function(){
+            // or directly on the modal
+
+
+            $("#id").val($(this).attr("data-id"));
+            $("#number").val($(this).attr("data-number"));
+            $("#fullName").val($(this).attr("data-name"));
+
+            $('#modal-edit').foundation('reveal', 'open');
+            console.log($("#id").val());
+            //$('#myModal').foundation('reveal', 'close');
+          });
+
+          $("#form-update").submit(function(e){
+
+              e.preventDefault();
+
+              $.post("/updateContact", $("#form-update").serialize(),function(data){
+                //ar temp = $.parseJSON(data);
+                if(data.success){
+                  $('#modal-edit').foundation('reveal', 'close');
+                  setTimeout(function(){ window.location.reload()},1000);
+                }
+
+              })
+
+          })
+
+      });
+
+    </script>
+
+</body>
+</html>

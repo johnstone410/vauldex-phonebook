@@ -1,0 +1,24 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Add a contact page
+GET     /add_contact                           controllers.Application.add_contact
+
+# SUBMIT ADD CONTACT FORM
+POST     /submit                           controllers.Application.submitContact
+
+# DELETE A CONTACT
+GET     /deleteContact                           controllers.Application.deleteContact(id: Long ?= -1)
+
+# UPDATE A CONTACT
+POST     /updateContact                           controllers.Application.updateContact
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /wj-assets/*file               controllers.WebJarAssets.at(file)

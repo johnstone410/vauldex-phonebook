@@ -1,0 +1,56 @@
+@(title: String, formContact: Form[Contact], action: play.api.mvc.Call)
+@import helper._
+@main(title){
+  @form(action = action) {
+    <div class="row" style="margin-top:20px;">
+      <div class="small-8 small-centered columns">
+        <h4>Add Contact</h4>
+        <hr>
+      </div>
+      <div class="small-8 small-centered columns">
+        <div class="row">
+          @if(formContact("fullName").hasErrors) {
+            <div class="small-12 columns">test</div>
+          }
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">Name</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" name="@formContact("fullName").name" id="right-label" placeholder="name here">
+          </div>
+        </div>
+      </div>
+      <div class="small-8 small-centered columns">
+        <div class="row">
+          @if(formContact("number").error) {
+            <div class="small-12 columns">test</div>
+          }
+          <div class="small-3 columns">
+            <label for="right-label" class="right inline">Number</label>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" name="@formContact("number").name" required id="right-label" placeholder="number here">
+          </div>
+        </div>
+      </div>
+      <div class="small-8 small-centered columns">
+        <div class="row">
+          <div class="small-3 columns">
+          </div>
+          <div class="small-9 columns">
+            <div class="button-bar">
+              <ul class="button-group radius right ">
+                <li><input type="submit" name="submit" class="small button success" value="Submit"></li>
+                <li><input type="reset"  value="reset" class="small button alert "></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  }
+
+}

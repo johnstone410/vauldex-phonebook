@@ -1,0 +1,12 @@
+Phonebook Simple Web
+=============
+
+Database Installation
+-------------
+
+Run blow commands for database.
+
+- createuser --encrypted --pwprompt phonebookuser
+- createdb --encoding=UTF8 --owner=phonebookuser phonebook
+
+CREATE USER ajcaminero WITH PASSWORD 'camsdb';

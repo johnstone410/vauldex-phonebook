@@ -1,0 +1,20 @@
+update
+run
+update
+compile
+run
+createdb --encoding=UTF8 --owner=test phonebook
+createdb --encoding=UTF8 --owner=phonebook phonebook
+createuser --encrypted --pwprompt test
+psql
+run
+update
+compile
+run
+compile
+activator run
+run
+ls
+run
+compile
+run
