@@ -3,8 +3,10 @@
 <html>
 <head>
   <title>@title</title>
-  <link rel="stylesheet"  href="@routes.WebJarAssets.at(WebJarAssets.locate("foundation.min.css"))">
+  <link rel="stylesheet"  href="@routes.WebJarAssets.at(WebJarAssets.locate("foundation/css/foundation.min.css"))">
   <link rel="stylesheet"  href="@routes.WebJarAssets.at(WebJarAssets.locate("font-awesome.min.css"))">
+
+
 </head>
 <body>
 
@@ -32,7 +34,7 @@
     </div>
 
     <script src="@routes.WebJarAssets.at(WebJarAssets.fullPath("jquery","jquery.min.js"))"></script>
-    <script src="@routes.WebJarAssets.at(WebJarAssets.locate("foundation.min.js"))"></script>
+    <script src="@routes.WebJarAssets.at(WebJarAssets.locate("foundation/js/foundation.min.js"))"></script>
 
     <script>
       $(document).foundation();
@@ -47,16 +49,13 @@
           });
 
           $(".edit").click(function(){
-            // or directly on the modal
-
 
             $("#id").val($(this).attr("data-id"));
             $("#number").val($(this).attr("data-number"));
             $("#fullName").val($(this).attr("data-name"));
 
             $('#modal-edit').foundation('reveal', 'open');
-            console.log($("#id").val());
-            //$('#myModal').foundation('reveal', 'close');
+
           });
 
           $("#form-update").submit(function(e){

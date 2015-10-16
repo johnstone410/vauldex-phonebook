@@ -1,4 +1,4 @@
-@(title: String, formContact: Form[Contact], action: play.api.mvc.Call)
+@(title: String, formContact: Form[Contact], action: play.api.mvc.Call)(implicit request: RequestHeader, messages: Messages)
 @import helper._
 @main(title){
   @form(action = action) {
@@ -9,30 +9,25 @@
       </div>
       <div class="small-8 small-centered columns">
         <div class="row">
-          @if(formContact("fullName").hasErrors) {
-            <div class="small-12 columns">test</div>
-          }
-          <div class="small-3 columns">
-            <label for="right-label" class="right inline">Name</label>
-          </div>
-          <div class="small-9 columns">
-            <input type="text" name="@formContact("fullName").name" id="right-label" placeholder="name here">
+
+          <div class="small-12 columns">
+            @inputText(formContact("fullName"), '_label -> "First Name:", '_showConstraints -> false)
           </div>
         </div>
       </div>
+
+
       <div class="small-8 small-centered columns">
         <div class="row">
-          @if(formContact("number").error) {
-            <div class="small-12 columns">test</div>
-          }
-          <div class="small-3 columns">
-            <label for="right-label" class="right inline">Number</label>
-          </div>
-          <div class="small-9 columns">
-            <input type="text" name="@formContact("number").name" required id="right-label" placeholder="number here">
+
+          <div class="small-12 columns">
+
+            @inputText(formContact("number"), '_label -> "Number:", '_showConstraints -> false)
           </div>
         </div>
       </div>
+
+
       <div class="small-8 small-centered columns">
         <div class="row">
           <div class="small-3 columns">

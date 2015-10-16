@@ -10,7 +10,6 @@ import slick.profile.RelationalProfile
 
 private[models] trait Contacts extends HasDatabaseConfigProvider[RelationalProfile] {
   import slick.driver.PostgresDriver.api._
-
   /** Table Definition */
   protected[this] class ContactsTable(tag: Tag) extends Table[Contact](tag, "CONTACTS") {
     def id = column[Long]("ID", O.PrimaryKey, O.AutoInc)
@@ -19,6 +18,8 @@ private[models] trait Contacts extends HasDatabaseConfigProvider[RelationalProfi
     def * = (id.?,
       fullName,
       number
-    ) <> (Contact.tupled, Contact.unapply _)
+    ) <> ((Contact.apply _).tupled, Contact.unapply _)
+
+
   }
 }

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Volumes/Development/Projects/phonebook/conf/routes
-// @DATE:Wed Oct 14 15:54:12 PHT 2015
+// @DATE:Fri Oct 16 17:15:12 PHT 2015
 
 package router
 
@@ -17,7 +17,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   Application_1: controllers.Application,
-  // @LINE:24
+  // @LINE:35
   WebJarAssets_0: controllers.WebJarAssets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -26,7 +26,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     Application_1: controllers.Application,
-    // @LINE:24
+    // @LINE:35
     WebJarAssets_0: controllers.WebJarAssets
   ) = this(errorHandler, Application_1, WebJarAssets_0, "/")
 
@@ -47,6 +47,10 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """submit""", """controllers.Application.submitContact"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """deleteContact""", """controllers.Application.deleteContact(id:Long ?= -1)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateContact""", """controllers.Application.updateContact"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """add_profile/$id<[^/]+>""", """controllers.Application.add_profile(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """submit_profile/$id<[^/]+>""", """controllers.Application.submitProfile(id:Long)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """submit_update_profile/$id<[^/]+>""", """controllers.Application.submitUpdateProfile(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """get_user_profile/$id<[^/]+>""", """controllers.Application.getUserProfile(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """wj-assets/$file<.+>""", """controllers.WebJarAssets.at(file:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -140,11 +144,79 @@ class Routes(
     )
   )
 
+  // @LINE:22
+  private[this] lazy val controllers_Application_add_profile5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("add_profile/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_Application_add_profile5_invoker = createInvoker(
+    Application_1.add_profile(fakeValue[Long]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "add_profile",
+      Seq(classOf[Long]),
+      "GET",
+      """ PROFILE""",
+      this.prefix + """add_profile/$id<[^/]+>"""
+    )
+  )
+
   // @LINE:24
-  private[this] lazy val controllers_WebJarAssets_at5_route = Route("GET",
+  private[this] lazy val controllers_Application_submitProfile6_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("submit_profile/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_Application_submitProfile6_invoker = createInvoker(
+    Application_1.submitProfile(fakeValue[Long]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "submitProfile",
+      Seq(classOf[Long]),
+      "GET",
+      """ PROFILE SUBMIT""",
+      this.prefix + """submit_profile/$id<[^/]+>"""
+    )
+  )
+
+  // @LINE:26
+  private[this] lazy val controllers_Application_submitUpdateProfile7_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("submit_update_profile/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_Application_submitUpdateProfile7_invoker = createInvoker(
+    Application_1.submitUpdateProfile(fakeValue[Long]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "submitUpdateProfile",
+      Seq(classOf[Long]),
+      "POST",
+      """  UPDATE PROFILE SUBMIT""",
+      this.prefix + """submit_update_profile/$id<[^/]+>"""
+    )
+  )
+
+  // @LINE:29
+  private[this] lazy val controllers_Application_getUserProfile8_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("get_user_profile/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_Application_getUserProfile8_invoker = createInvoker(
+    Application_1.getUserProfile(fakeValue[Long]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "getUserProfile",
+      Seq(classOf[Long]),
+      "GET",
+      """ PROFILE SUBMIT""",
+      this.prefix + """get_user_profile/$id<[^/]+>"""
+    )
+  )
+
+  // @LINE:35
+  private[this] lazy val controllers_WebJarAssets_at9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("wj-assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_WebJarAssets_at5_invoker = createInvoker(
+  private[this] lazy val controllers_WebJarAssets_at9_invoker = createInvoker(
     WebJarAssets_0.at(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -190,10 +262,34 @@ class Routes(
         controllers_Application_updateContact4_invoker.call(Application_1.updateContact)
       }
   
+    // @LINE:22
+    case controllers_Application_add_profile5_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Application_add_profile5_invoker.call(Application_1.add_profile(id))
+      }
+  
     // @LINE:24
-    case controllers_WebJarAssets_at5_route(params) =>
+    case controllers_Application_submitProfile6_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Application_submitProfile6_invoker.call(Application_1.submitProfile(id))
+      }
+  
+    // @LINE:26
+    case controllers_Application_submitUpdateProfile7_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Application_submitUpdateProfile7_invoker.call(Application_1.submitUpdateProfile(id))
+      }
+  
+    // @LINE:29
+    case controllers_Application_getUserProfile8_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_Application_getUserProfile8_invoker.call(Application_1.getUserProfile(id))
+      }
+  
+    // @LINE:35
+    case controllers_WebJarAssets_at9_route(params) =>
       call(params.fromPath[String]("file", None)) { (file) =>
-        controllers_WebJarAssets_at5_invoker.call(WebJarAssets_0.at(file))
+        controllers_WebJarAssets_at9_invoker.call(WebJarAssets_0.at(file))
       }
   }
 }

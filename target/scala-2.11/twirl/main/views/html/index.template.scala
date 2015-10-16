@@ -33,7 +33,7 @@ Seq[Any](format.raw/*1.38*/("""
         <tr>
           <th>Name</th>
           <th>Number</th>
-          <th width="150"> Action </th>
+          <th width="400"> Action </th>
 
         </tr>
       </thead>
@@ -44,21 +44,25 @@ Seq[Any](format.raw/*1.38*/("""
           <td>"""),_display_(/*18.16*/list/*18.20*/.number),format.raw/*18.27*/("""</td>
           <td>
             <ul class="button-group round">
-              <li><a href="javascript:;"  data-id=""""),_display_(/*21.53*/list/*21.57*/.id.get),format.raw/*21.64*/("""" data-name=""""),_display_(/*21.78*/list/*21.82*/.fullName),format.raw/*21.91*/("""" data-number=""""),_display_(/*21.107*/list/*21.111*/.number),format.raw/*21.118*/("""" class="tiny button edit">Edit</a></li>
-              <li><a href=""""),_display_(/*22.29*/routes/*22.35*/.Application.deleteContact(list.id.get)),format.raw/*22.74*/("""" class="tiny button delete" >Delete</a></li>
+              <li><a href="javascript:;"  data-id=""""),_display_(/*21.53*/list/*21.57*/.id.get),format.raw/*21.64*/("""" data-name=""""),_display_(/*21.78*/list/*21.82*/.fullName),format.raw/*21.91*/("""" data-number=""""),_display_(/*21.107*/list/*21.111*/.number),format.raw/*21.118*/(""""  class="tiny button edit">Edit</a></li>
+
+
+              <li><a href=""""),_display_(/*24.29*/routes/*24.35*/.Application.add_profile(list.id.get)),format.raw/*24.72*/("""" class="tiny button" >Add Contact Profile</a></li>
+
+              <li><a href=""""),_display_(/*26.29*/routes/*26.35*/.Application.deleteContact(list.id.get)),format.raw/*26.74*/("""" class="tiny button delete" >Delete</a></li>
 
             </ul>
           </td>
 
         </tr>
-        """)))}),format.raw/*28.10*/("""
-      """),format.raw/*29.7*/("""</tbody>
+        """)))}),format.raw/*32.10*/("""
+      """),format.raw/*33.7*/("""</tbody>
     </table>
 
     <!-- edit modal -->
     <div id="modal-edit" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
         <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-      <form id="form-update" action=""""),_display_(/*35.39*/routes/*35.45*/.Application.updateContact),format.raw/*35.71*/("""" method="POST" accept-charset="utf-8" >
+      <form id="form-update" action=""""),_display_(/*39.39*/routes/*39.45*/.Application.updateContact),format.raw/*39.71*/("""" method="POST" accept-charset="utf-8" >
 
         <div class="row" style="margin-top:20px;">
           <div class="small-8 small-centered columns">
@@ -106,7 +110,7 @@ Seq[Any](format.raw/*1.38*/("""
         </div>
       </form>
     </div>
-""")))}),format.raw/*83.2*/("""
+""")))}),format.raw/*87.2*/("""
 
 
 """))
@@ -129,11 +133,11 @@ Seq[Any](format.raw/*1.38*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Wed Oct 14 16:14:49 PHT 2015
+                  DATE: Fri Oct 16 16:25:20 PHT 2015
                   SOURCE: /Volumes/Development/Projects/phonebook/app/views/index.scala.html
-                  HASH: 4cc526e1b678fee5712d20e04d245353e9ec6e65
-                  MATRIX: 596->1|727->37|755->40|774->51|812->52|845->59|1062->249|1096->267|1135->268|1171->277|1218->297|1231->301|1261->310|1309->331|1322->335|1350->342|1494->459|1507->463|1535->470|1576->484|1589->488|1619->497|1663->513|1677->517|1706->524|1802->593|1817->599|1877->638|2013->743|2047->750|2348->1024|2363->1030|2410->1056|4202->2818
-                  LINES: 22->1|27->1|29->3|29->3|29->3|31->5|41->15|41->15|41->15|42->16|43->17|43->17|43->17|44->18|44->18|44->18|47->21|47->21|47->21|47->21|47->21|47->21|47->21|47->21|47->21|48->22|48->22|48->22|54->28|55->29|61->35|61->35|61->35|109->83
+                  HASH: f58c6b6078a533fc38d8cbe2aaeb747318b1a393
+                  MATRIX: 596->1|727->37|755->40|774->51|812->52|845->59|1062->249|1096->267|1135->268|1171->277|1218->297|1231->301|1261->310|1309->331|1322->335|1350->342|1494->459|1507->463|1535->470|1576->484|1589->488|1619->497|1663->513|1677->517|1706->524|1805->596|1820->602|1878->639|1986->720|2001->726|2061->765|2197->870|2231->877|2532->1151|2547->1157|2594->1183|4386->2945
+                  LINES: 22->1|27->1|29->3|29->3|29->3|31->5|41->15|41->15|41->15|42->16|43->17|43->17|43->17|44->18|44->18|44->18|47->21|47->21|47->21|47->21|47->21|47->21|47->21|47->21|47->21|50->24|50->24|50->24|52->26|52->26|52->26|58->32|59->33|65->39|65->39|65->39|113->87
                   -- GENERATED --
               */
           

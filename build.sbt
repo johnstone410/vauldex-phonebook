@@ -27,7 +27,8 @@ libraryDependencies ++= Seq(
   "org.webjars" % "backbonejs" % "1.2.1",
   "org.webjars" % "pace" % "1.0.2",
   "org.webjars" % "font-awesome" % "4.4.0",
-  "org.webjars" % "handsontable" % "0.17.0"
+  "org.webjars" % "handsontable" % "0.17.0",
+  "org.webjars.bower" % "foundation-datepicker" % "1.3.0"
 )
 
 sassOptions in Assets ++= Seq("--compass", "-r", "compass")

@@ -18,6 +18,17 @@ GET     /deleteContact                           controllers.Application.deleteC
 POST     /updateContact                           controllers.Application.updateContact
 
 
+# PROFILE
+GET     /add_profile/:id                           controllers.Application.add_profile(id: Long)
+# PROFILE SUBMIT
+GET     /submit_profile/:id                           controllers.Application.submitProfile(id: Long)
+#  UPDATE PROFILE SUBMIT
+POST     /submit_update_profile/:id                           controllers.Application.submitUpdateProfile(id: Long)
+
+# PROFILE SUBMIT
+GET     /get_user_profile/:id                           controllers.Application.getUserProfile(id: Long)
+
+
 
 
 # Map static resources from the /public folder to the /assets URL path

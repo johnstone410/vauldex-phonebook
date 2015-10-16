@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for phonebook#phonebook_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6be5bac8[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@201e4cf6[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -1156,6 +1156,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.webjars.bower#foundation-datepicker;1.3.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.webjars.bower#foundation-datepicker;1.3.0 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.webjars.bower#foundation-datepicker;1.3.0[0m
+[0m[[0mdebug[0m] [0m	found org.webjars.bower#foundation-datepicker;1.3.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for phonebook#phonebook_2.11;1.0-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for phonebook#phonebook_2.11;1.0-SNAPSHOT [compile][0m
@@ -1962,6 +1970,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for phonebook#phonebook_2.11;1.0-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for phonebook#phonebook_2.11;1.0-SNAPSHOT [runtime][0m
@@ -2769,6 +2781,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.3 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-test_2.11;2.4.3 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-test_2.11;2.4.3 {test=[default(compile)]}[0m
@@ -4329,6 +4345,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for phonebook#phonebook_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for phonebook#phonebook_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -5138,6 +5158,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for phonebook#phonebook_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for phonebook#phonebook_2.11;1.0-SNAPSHOT [test-internal][0m
@@ -5947,6 +5971,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars#handsontable;0.17.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->org.webjars.bower#foundation-datepicker;1.3.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.3 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.3 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies phonebook#phonebook_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.4.3 [test->compile][0m
@@ -7075,6 +7103,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.webjars#pace;1.0.2!pace.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.webjars#font-awesome;4.4.0!font-awesome.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.webjars#handsontable;0.17.0!handsontable.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.webjars.bower#foundation-datepicker;1.3.0!foundation-datepicker.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.6!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)[0m
@@ -7200,7 +7229,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4409ms :: artifacts dl 100ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3748ms :: artifacts dl 78ms[0m
 [0m[[0mdebug[0m] [0m	report for phonebook#phonebook_2.11;1.0-SNAPSHOT compile produced in /Volumes/Development/Projects/phonebook/target/resolution-cache/reports/phonebook-phonebook_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for phonebook#phonebook_2.11;1.0-SNAPSHOT runtime produced in /Volumes/Development/Projects/phonebook/target/resolution-cache/reports/phonebook-phonebook_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for phonebook#phonebook_2.11;1.0-SNAPSHOT test produced in /Volumes/Development/Projects/phonebook/target/resolution-cache/reports/phonebook-phonebook_2.11-test.xml[0m
@@ -7214,5 +7243,5 @@
 [0m[[0mdebug[0m] [0m	report for phonebook#phonebook_2.11;1.0-SNAPSHOT docs produced in /Volumes/Development/Projects/phonebook/target/resolution-cache/reports/phonebook-phonebook_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for phonebook#phonebook_2.11;1.0-SNAPSHOT pom produced in /Volumes/Development/Projects/phonebook/target/resolution-cache/reports/phonebook-phonebook_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for phonebook#phonebook_2.11;1.0-SNAPSHOT scala-tool produced in /Volumes/Development/Projects/phonebook/target/resolution-cache/reports/phonebook-phonebook_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (4409ms resolve - 100ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (3748ms resolve - 78ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

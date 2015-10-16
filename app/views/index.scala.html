@@ -7,7 +7,7 @@
         <tr>
           <th>Name</th>
           <th>Number</th>
-          <th width="150"> Action </th>
+          <th width="400"> Action </th>
 
         </tr>
       </thead>
@@ -18,7 +18,11 @@
           <td>@list.number</td>
           <td>
             <ul class="button-group round">
-              <li><a href="javascript:;"  data-id="@list.id.get" data-name="@list.fullName" data-number="@list.number" class="tiny button edit">Edit</a></li>
+              <li><a href="javascript:;"  data-id="@list.id.get" data-name="@list.fullName" data-number="@list.number"  class="tiny button edit">Edit</a></li>
+
+
+              <li><a href="@routes.Application.add_profile(list.id.get)" class="tiny button" >Add Contact Profile</a></li>
+
               <li><a href="@routes.Application.deleteContact(list.id.get)" class="tiny button delete" >Delete</a></li>
 
             </ul>

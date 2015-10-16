@@ -18,3 +18,9 @@ ls
 run
 compile
 run
+~compile
+~run
+exit
+clean
+~compile
+run

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Volumes/Development/Projects/phonebook/conf/routes
-// @DATE:Wed Oct 14 15:54:12 PHT 2015
+// @DATE:Fri Oct 16 17:15:12 PHT 2015
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -14,7 +14,7 @@ import _root_.controllers.Assets.Asset
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:24
+  // @LINE:35
   class ReverseWebJarAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -22,7 +22,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:24
+    // @LINE:35
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.WebJarAssets.at",
       """
@@ -42,12 +42,42 @@ package controllers.javascript {
     }
 
   
+    // @LINE:22
+    def add_profile: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.add_profile",
+      """
+        function(id) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "add_profile/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+        }
+      """
+    )
+  
+    // @LINE:26
+    def submitUpdateProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.submitUpdateProfile",
+      """
+        function(id) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "submit_update_profile/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+        }
+      """
+    )
+  
     // @LINE:15
     def deleteContact: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.deleteContact",
       """
         function(id) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteContact" + _qS([(id == null ? null : (""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("id", id))])})
+        }
+      """
+    )
+  
+    // @LINE:24
+    def submitProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.submitProfile",
+      """
+        function(id) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "submit_profile/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
         }
       """
     )
@@ -78,6 +108,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "updateContact"})
+        }
+      """
+    )
+  
+    // @LINE:29
+    def getUserProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.getUserProfile",
+      """
+        function(id) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "get_user_profile/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
         }
       """
     )

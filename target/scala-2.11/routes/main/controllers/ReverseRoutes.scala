@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Volumes/Development/Projects/phonebook/conf/routes
-// @DATE:Wed Oct 14 15:54:12 PHT 2015
+// @DATE:Fri Oct 16 17:15:12 PHT 2015
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -12,14 +12,14 @@ import _root_.controllers.Assets.Asset
 // @LINE:6
 package controllers {
 
-  // @LINE:24
+  // @LINE:35
   class ReverseWebJarAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:24
+    // @LINE:35
     def at(file:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "wj-assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -34,10 +34,28 @@ package controllers {
     }
 
   
+    // @LINE:22
+    def add_profile(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "add_profile/" + implicitly[PathBindable[Long]].unbind("id", id))
+    }
+  
+    // @LINE:26
+    def submitUpdateProfile(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "submit_update_profile/" + implicitly[PathBindable[Long]].unbind("id", id))
+    }
+  
     // @LINE:15
     def deleteContact(id:Long = -1): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "deleteContact" + queryString(List(if(id == -1) None else Some(implicitly[QueryStringBindable[Long]].unbind("id", id)))))
+    }
+  
+    // @LINE:24
+    def submitProfile(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "submit_profile/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
     // @LINE:12
@@ -56,6 +74,12 @@ package controllers {
     def updateContact(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "updateContact")
+    }
+  
+    // @LINE:29
+    def getUserProfile(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "get_user_profile/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
     // @LINE:6

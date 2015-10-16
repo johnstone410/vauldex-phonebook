@@ -16,15 +16,15 @@ import play.api.data._
 import ejisan.play.libs.PageMeta
 import libs.PjaxHeader
 
-class add_contact extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template3[String,Form[Contact],play.api.mvc.Call,play.twirl.api.HtmlFormat.Appendable] {
+class add_contact extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template5[String,Form[Contact],play.api.mvc.Call,RequestHeader,Messages,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(title: String, formContact: Form[Contact], action: play.api.mvc.Call):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(title: String, formContact: Form[Contact], action: play.api.mvc.Call)(implicit request: RequestHeader, messages: Messages):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 import helper._
 
-Seq[Any](format.raw/*1.72*/("""
+Seq[Any](format.raw/*1.125*/("""
 """),_display_(/*3.2*/main(title)/*3.13*/{_display_(Seq[Any](format.raw/*3.14*/("""
   """),_display_(/*4.4*/form(action = action)/*4.25*/ {_display_(Seq[Any](format.raw/*4.27*/("""
     """),format.raw/*5.5*/("""<div class="row" style="margin-top:20px;">
@@ -34,30 +34,25 @@ Seq[Any](format.raw/*1.72*/("""
       </div>
       <div class="small-8 small-centered columns">
         <div class="row">
-          """),_display_(/*12.12*/if(formContact("fullName").hasErrors)/*12.49*/ {_display_(Seq[Any](format.raw/*12.51*/("""
-            """),format.raw/*13.13*/("""<div class="small-12 columns">test</div>
-          """)))}),format.raw/*14.12*/("""
-          """),format.raw/*15.11*/("""<div class="small-3 columns">
-            <label for="right-label" class="right inline">Name</label>
-          </div>
-          <div class="small-9 columns">
-            <input type="text" name=""""),_display_(/*19.39*/formContact("fullName")/*19.62*/.name),format.raw/*19.67*/("""" id="right-label" placeholder="name here">
-          </div>
+
+          <div class="small-12 columns">
+            """),_display_(/*14.14*/inputText(formContact("fullName"), '_label -> "First Name:", '_showConstraints -> false)),format.raw/*14.102*/("""
+          """),format.raw/*15.11*/("""</div>
         </div>
       </div>
+
+
       <div class="small-8 small-centered columns">
         <div class="row">
-          """),_display_(/*25.12*/if(formContact("number").error)/*25.43*/ {_display_(Seq[Any](format.raw/*25.45*/("""
-            """),format.raw/*26.13*/("""<div class="small-12 columns">test</div>
-          """)))}),format.raw/*27.12*/("""
-          """),format.raw/*28.11*/("""<div class="small-3 columns">
-            <label for="right-label" class="right inline">Number</label>
-          </div>
-          <div class="small-9 columns">
-            <input type="text" name=""""),_display_(/*32.39*/formContact("number")/*32.60*/.name),format.raw/*32.65*/("""" required id="right-label" placeholder="number here">
-          </div>
+
+          <div class="small-12 columns">
+
+            """),_display_(/*25.14*/inputText(formContact("number"), '_label -> "Number:", '_showConstraints -> false)),format.raw/*25.96*/("""
+          """),format.raw/*26.11*/("""</div>
         </div>
       </div>
+
+
       <div class="small-8 small-centered columns">
         <div class="row">
           <div class="small-3 columns">
@@ -76,17 +71,17 @@ Seq[Any](format.raw/*1.72*/("""
 
 
     </div>
-  """)))}),format.raw/*54.4*/("""
+  """)))}),format.raw/*49.4*/("""
 
-""")))}),format.raw/*56.2*/("""
+""")))}),format.raw/*51.2*/("""
 """))
       }
     }
   }
 
-  def render(title:String,formContact:Form[Contact],action:play.api.mvc.Call): play.twirl.api.HtmlFormat.Appendable = apply(title,formContact,action)
+  def render(title:String,formContact:Form[Contact],action:play.api.mvc.Call,request:RequestHeader,messages:Messages): play.twirl.api.HtmlFormat.Appendable = apply(title,formContact,action)(request,messages)
 
-  def f:((String,Form[Contact],play.api.mvc.Call) => play.twirl.api.HtmlFormat.Appendable) = (title,formContact,action) => apply(title,formContact,action)
+  def f:((String,Form[Contact],play.api.mvc.Call) => (RequestHeader,Messages) => play.twirl.api.HtmlFormat.Appendable) = (title,formContact,action) => (request,messages) => apply(title,formContact,action)(request,messages)
 
   def ref: this.type = this
 
@@ -99,11 +94,11 @@ Seq[Any](format.raw/*1.72*/("""
 object add_contact extends add_contact_Scope0.add_contact
               /*
                   -- GENERATED --
-                  DATE: Wed Oct 14 18:21:38 PHT 2015
+                  DATE: Fri Oct 16 16:25:20 PHT 2015
                   SOURCE: /Volumes/Development/Projects/phonebook/app/views/add_contact.scala.html
-                  HASH: 401c2a2c60d5bb1f4abbc3e1041dc7fa5844bcd1
-                  MATRIX: 627->1|807->71|834->90|853->101|891->102|920->106|949->127|988->129|1019->134|1283->371|1329->408|1369->410|1410->423|1493->475|1532->486|1755->682|1787->705|1813->710|2017->887|2057->918|2097->920|2138->933|2221->985|2260->996|2485->1194|2515->1215|2541->1220|3231->1880|3264->1883
-                  LINES: 22->1|27->1|28->3|28->3|28->3|29->4|29->4|29->4|30->5|37->12|37->12|37->12|38->13|39->14|40->15|44->19|44->19|44->19|50->25|50->25|50->25|51->26|52->27|53->28|57->32|57->32|57->32|79->54|81->56
+                  HASH: 154e252e9b1c74195bc3713c94c05463029359e1
+                  MATRIX: 650->1|884->124|911->143|930->154|968->155|997->159|1026->180|1065->182|1096->187|1404->468|1514->556|1553->567|1750->737|1853->819|1892->830|2519->1427|2552->1430
+                  LINES: 22->1|27->1|28->3|28->3|28->3|29->4|29->4|29->4|30->5|39->14|39->14|40->15|50->25|50->25|51->26|74->49|76->51
                   -- GENERATED --
               */
           

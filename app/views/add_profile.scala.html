@@ -1,0 +1,93 @@
+@(id: Long,title: String,formProfile: Form[UserProfile], action: play.api.mvc.Call, contact: Option[Contact], profile: Option[UserProfile])(implicit request: RequestHeader, messages: Messages)
+@import helper._
+
+@main(title){
+  @form(action = action) {
+    <div class="row" style="margin-top:20px;">
+      <div class="panel callout radius small-8 small-centered columns">
+        <h4>@title</h4>
+
+      </div>
+      <div class="small-8 small-centered columns">
+
+        <div class="row">
+          <input type="hidden" value="@id" name="id" id="id">
+          <div class="small-12 columns">
+            @inputText(formProfile("firstName"), '_label -> "First Name:", '_showConstraints -> false)
+          </div>
+        </div>
+      </div>
+      <div class="small-8 small-centered columns">
+        <div class="row">
+
+          <div class="small-12 columns">
+
+            @inputText(formProfile("lastName"), '_label -> "Last Name:", '_showConstraints -> false)
+          </div>
+        </div>
+      </div>
+
+            <div class="small-8 small-centered columns">
+        <div class="row">
+
+          <div class="small-12 columns">
+            @inputText(formProfile("middleName"), '_label -> "Middle Name:", '_showConstraints -> false)
+          </div>
+        </div>
+      </div>
+
+      <div class="small-8 small-centered columns">
+        <div class="row">
+
+          <div class="small-12 columns">
+            @inputText(formProfile("birthdate"), '_label -> "Birthdate:",'placeholder -> "MM/DD/YYYY" , '_showConstraints -> false)
+          </div>
+        </div>
+      </div>
+
+      <div class="small-8 small-centered columns">
+        <div class="row">
+
+          <div class="small-12 columns">
+            @select(formProfile("gender"), options("M" -> "Male" , "F" -> "Female"),'_label -> "Gender:", '_showConstraints -> false)
+          </div>
+        </div>
+      </div>
+      <div class="small-8 small-centered columns">
+        <div class="row">
+
+          <div class="small-12 columns">
+            @inputText(formProfile("address"), '_label -> "Address:", '_showConstraints -> false)
+          </div>
+        </div>
+      </div>
+
+      <div class="small-8 small-centered columns">
+        <div class="row">
+
+          <div class="small-12 columns">
+            @inputText(formProfile("contactNo"), '_label -> "Contact No.:", '_showConstraints -> false)
+          </div>
+        </div>
+      </div>
+
+      <div class="small-8 small-centered columns">
+        <div class="row">
+          <div class="small-3 columns">
+          </div>
+          <div class="small-9 columns">
+            <div class="button-bar">
+              <ul class="button-group radius right ">
+                <li><input type="submit" name="submit" class="small button success" value="Submit"></li>
+                <li><input type="reset"  value="reset" class="small button alert "></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  }
+}
